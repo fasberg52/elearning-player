@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taherian Player</title>
+
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+
+    <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/videojs-seek-buttons@3.0.1/dist/videojs-seek-buttons.min.js
+    "></script>
+    <link
+      href="
+    https://cdn.jsdelivr.net/npm/videojs-seek-buttons@3.0.1/dist/videojs-seek-buttons.min.css
+    "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video
+      id="my-video"
+      class="video-js vjs-theme-city"
+      controls
+      preload="auto"
+      width="800"
+      height="450"
+      data-setup='{
+      "plugins": {
+        "seekButtons": {
+          "forward": 10,
+          "back": 10
+        }
+      }
+    }'
+    >
+      <source src="youre-taherian-video.mp4" type="video/mp4" />
+    </video>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var player = videojs("my-video", {
+          plugins: {
+            seekButtons: {
+              forward: 10,
+              back: 10,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
